@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func NavToSecondScreen(_ sender: UIButton) {
+        performSegue(withIdentifier: "NavSecondScreen", sender: nil)
+    }
+    
+    @IBAction func backToStart (_ segue: UIStoryboardSegue){
+        
+    }
+    
 }
 
