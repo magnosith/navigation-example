@@ -24,19 +24,97 @@
                                     <action selector="goToTwoSecondStep:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c3C-lB-aWX"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jv1-k4-Tc4">
+                                <rect key="frame" x="20" y="115" width="374" height="133"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajs-jO-AQS">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="STOP">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="trafficLightStatus:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fVZ-yJ-qfA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCv-Ra-uT9">
+                                        <rect key="frame" x="0.0" y="51" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="ATTENTION">
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="trafficLightStatus:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H8B-0J-VLV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thM-BH-0f5">
+                                        <rect key="frame" x="0.0" y="102" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="GO">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="trafficLightStatus:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="G6L-ws-FXI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jv1-k4-Tc4" firstAttribute="top" secondItem="2Yw-1B-5V9" secondAttribute="bottom" constant="20" id="EiW-N1-cCw"/>
                             <constraint firstItem="2Yw-1B-5V9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="LV9-iL-oTQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Yw-1B-5V9" secondAttribute="trailing" constant="20" id="jxW-sN-tRG"/>
+                            <constraint firstItem="Jv1-k4-Tc4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="qfS-GG-Ale"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jv1-k4-Tc4" secondAttribute="trailing" constant="20" id="vVQ-F9-2Tm"/>
                             <constraint firstItem="2Yw-1B-5V9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="vgk-p5-P3V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="attentionButton" destination="qCv-Ra-uT9" id="8U7-8w-9fZ"/>
+                        <outlet property="goButton" destination="thM-BH-0f5" id="8Xf-Xy-7Lv"/>
+                        <outlet property="stopButton" destination="ajs-jO-AQS" id="KHn-gC-Axi"/>
+                        <segue destination="A7R-zv-C90" kind="show" identifier="panelSegue" id="JBJ-jT-caa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="110"/>
+        </scene>
+        <!--Panel View Controller-->
+        <scene sceneID="CHA-t8-79R">
+            <objects>
+                <viewController id="A7R-zv-C90" customClass="PanelViewController" customModule="navigation_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZsH-bo-T8t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHc-Qw-x89">
+                                <rect key="frame" x="20" y="64" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="lBM-mP-8wU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Sx-tu-mpH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cHc-Qw-x89" firstAttribute="leading" secondItem="8Sx-tu-mpH" secondAttribute="leading" constant="20" id="P09-kW-IT9"/>
+                            <constraint firstItem="cHc-Qw-x89" firstAttribute="top" secondItem="8Sx-tu-mpH" secondAttribute="top" constant="20" id="U89-vM-kMG"/>
+                            <constraint firstItem="8Sx-tu-mpH" firstAttribute="trailing" secondItem="cHc-Qw-x89" secondAttribute="trailing" constant="20" id="jtm-SX-Zo7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JbS-ta-EbF"/>
+                    <connections>
+                        <outlet property="lightView" destination="cHc-Qw-x89" id="QTd-oQ-wy8"/>
+                        <outlet property="trafficLight" destination="cHc-Qw-x89" id="lQk-H9-GKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8o-I4-eRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="826"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9MN-FN-wjT">
@@ -58,8 +136,17 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

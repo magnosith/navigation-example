@@ -21,6 +21,7 @@
 		3F732AE62A392A090047770A /* SecondFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F732AE52A392A090047770A /* SecondFlowViewController.swift */; };
 		3F732AE82A39382D0047770A /* OtheFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F732AE72A39382D0047770A /* OtheFlow.storyboard */; };
 		3F732AEA2A393E550047770A /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F732AE92A393E550047770A /* TrafficViewController.swift */; };
+		3FEE55F22A3A81FC008F4CFF /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE55F12A3A81FC008F4CFF /* PanelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3F732AE52A392A090047770A /* SecondFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFlowViewController.swift; sourceTree = "<group>"; };
 		3F732AE72A39382D0047770A /* OtheFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtheFlow.storyboard; sourceTree = "<group>"; };
 		3F732AE92A393E550047770A /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
+		3FEE55F12A3A81FC008F4CFF /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				3F3A7E732A37EA2900E9BD5A /* SecondViewController.swift */,
 				3F732AE52A392A090047770A /* SecondFlowViewController.swift */,
 				3F732AE92A393E550047770A /* TrafficViewController.swift */,
+				3FEE55F12A3A81FC008F4CFF /* PanelViewController.swift */,
 			);
 			path = "navigation-example";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				3F3A7E742A37EA2900E9BD5A /* SecondViewController.swift in Sources */,
 				3F3A7E482A37E8F900E9BD5A /* ViewController.swift in Sources */,
 				3F732AE62A392A090047770A /* SecondFlowViewController.swift in Sources */,
+				3FEE55F22A3A81FC008F4CFF /* PanelViewController.swift in Sources */,
 				3F3A7E762A37F30600E9BD5A /* ThirdViewController.swift in Sources */,
 				3F3A7E442A37E8F900E9BD5A /* AppDelegate.swift in Sources */,
 				3F3A7E462A37E8F900E9BD5A /* SceneDelegate.swift in Sources */,
